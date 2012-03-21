@@ -22,6 +22,12 @@ is complete, the next item in the list is used in the same way.
 
 Sheaf itself returns a promise which resolves with an array of final values.
 
+Installation:
+-------------
+```bash
+$ npm install sheaf
+```
+
 Example:
 --------
 ```javascript
