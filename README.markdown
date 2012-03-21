@@ -4,6 +4,8 @@ Sheaf
 An API to make looping over a series of async activities one at a time more
 straightforward.
 
+[![Build Status](https://secure.travis-ci.org/pete-otaqui/sheaf.png)](http://travis-ci.org/pete-otaqui/sheaf)
+
 Essentially it helps you code in a more synchronous manner than is convenient
 with many NodeJS libraries.  Since much of Node's value is exactly it's async
 nature you should _use with caution_!
