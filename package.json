@@ -1,0 +1,23 @@
+{
+  "author": "Pete Otaqui <pete@otaqui.com> (http://otaqui.com/)",
+  "name": "sheaf",
+  "description": "Repeated promises",
+  "version": "0.1.0",
+  "repository": {
+    "url": "http://github.com/pete-otaqui/sheaf.git"
+  },
+  "main": "lib/sheaf.js",
+  "engines": {
+    "node": "~0.6.10"
+  },
+  "dependencies": {
+    "node-promise": ">=0.5.1"
+  },
+  "devDependencies": {
+    "nodeunit": ">=0.5.5"
+  },
+  "optionalDependencies": {},
+  "scripts": {
+    "test": "nodeunit test/*.js"
+  }
+}
