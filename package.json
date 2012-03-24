@@ -11,10 +11,10 @@
     "node": "~0.6.10"
   },
   "dependencies": {
-    "node-promise": ">=0.5.1"
+    "bond": ">=0.1.4"
   },
   "devDependencies": {
-    "nodeunit": ">=0.5.5"
+    "nodeunit": ">=0.7.0"
   },
   "optionalDependencies": {},
   "scripts": {

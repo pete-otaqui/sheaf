@@ -2,32 +2,31 @@
 
 
 
-
-
 var sheaf = require('../lib/sheaf'),
     testCase = require('nodeunit').testCase,
-    defer = require('node-promise').defer;
+    defer = require('bond').defer;
+
 
 var async1 = function(a) {
     var dfd = defer();
     setTimeout(function() {
         dfd.resolve('a1:' + a);
     }, 1);
-    return dfd.promise;
+    return dfd.promise();
 };
 var async2 = function(a) {
     var dfd = defer();
     setTimeout(function() {
         dfd.resolve('a2:' + a/*, 'b2'*/); // @todo find a multi-arg promise lib
     }, 1);
-    return dfd.promise;
+    return dfd.promise();
 };
 var reject1 = function(a) {
     var dfd = defer();
     setTimeout(function() {
         dfd.reject('r1:' + a); // @todo find a multi-arg promise lib
     }, 1);
-    return dfd.promise;
+    return dfd.promise();
 };
 var sync1 = function(a) {
     return 's1:' + a;
@@ -59,18 +58,16 @@ module.exports = testCase({
         var list = ['one', 'two', 'three'],
             index = 0;
         test.expect(4);
-        sheaf(list, async1, async2).then(
-            function(values) {
+        sheaf(list, async1, async2)
+            .then(function(values) {
                 test.deepEqual(values, [['a2:a1:one'], ['a2:a1:two'], ['a2:a1:three']]);
                 test.done();
-            },
-            null,
-            function(value) {
+            })
+            .progress(function(value) {
                 var results = [['a2:a1:one'], ['a2:a1:two'], ['a2:a1:three']];
                 test.deepEqual(value, results[index]);
                 index++;
-            }
-        );
+            });
     },
     test_sync_function: function(test) {
         var list = ['one', 'two', 'three'];
