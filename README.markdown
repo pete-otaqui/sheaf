@@ -22,6 +22,10 @@ is complete, the next item in the list is used in the same way.
 
 Sheaf itself returns a promise which resolves with an array of final values.
 
+Here's a diagram of how it works:
+
+![Sheaf flow](https://docs.google.com/drawings/pub?id=1TggGPBZUpjIygkfsE4A98Udc0Obx8wnjD-j4034z-Og&w=619&h=217)
+
 Installation:
 -------------
 ```bash
