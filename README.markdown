@@ -80,12 +80,4 @@ sheaf(urls, getu, parse, check)
     );
 ```
 
-A word on multiple returns
---------------------------
 
-Theoretically, sheaf supports multiple return values for promise-resolution,
-but unfortunately node-promise (which sheaf uses) does not.  This will
-hopefully be rectified in the future with an alternative promises library.
-
-Note that jQuery's Ajax functions are a good example of why you might want
-promises to resolve with multiple arguments.
