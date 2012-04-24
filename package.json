@@ -2,7 +2,7 @@
   "author": "Pete Otaqui <pete@otaqui.com> (http://otaqui.com/)",
   "name": "sheaf",
   "description": "Repeated promises",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "http://github.com/pete-otaqui/sheaf.git"
